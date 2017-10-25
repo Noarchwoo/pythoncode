@@ -2,6 +2,7 @@
 
 import time
 from os import system
+import subprocess
 import datetime
 
 
@@ -23,7 +24,7 @@ while flag:
         sep = (hour-h)*3600 + (minute-m)*60
         time.sleep(sep)
         print 'shutting down...'
-        system('halt')
+        subprocess.call(['shutdown', '/s'])
     else:
         print 'sorry, now is over %d:%d' %(hour, minute)
         print 'try another time'
